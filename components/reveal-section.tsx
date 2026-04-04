@@ -52,29 +52,29 @@ export function RevealSection({ isVisible, name = "YOUR NAME" }: RevealSectionPr
 
       <Confetti isActive={showConfetti} />
 
-      {/* Left elephant — slides in from left, faces right */}
+      {/* Left elephant — flipped to face right (inward) */}
       <div
-        className={`absolute bottom-0 left-0 w-40 md:w-56 lg:w-72 z-20 transition-opacity duration-300 ${
-          showElephants ? "opacity-100 animate-slide-in-left" : "opacity-0"
-        }`}
+        className={`absolute bottom-0 left-0 w-40 md:w-56 lg:w-72 z-20 transition-opacity duration-300 ${showElephants ? "opacity-100 animate-slide-in-left" : "opacity-0"
+          }`}
       >
         <img
-          src="/images/elephant.jpg"
+          src="/images/elephant.png"
           alt="Decorated Indian wedding elephant"
           className="w-full object-contain drop-shadow-2xl"
+          style={{ mixBlendMode: "multiply" }}
         />
       </div>
 
-      {/* Right elephant — slides in from right, faces left (natural orientation) */}
+      {/* Right elephant — natural orientation, already faces left (inward) */}
       <div
-        className={`absolute bottom-0 right-0 w-40 md:w-56 lg:w-72 z-20 transition-opacity duration-300 ${
-          showElephants ? "opacity-100 animate-slide-in-right" : "opacity-0"
-        }`}
+        className={`absolute bottom-0 right-0 w-40 md:w-56 lg:w-72 z-20 transition-opacity duration-300 ${showElephants ? "opacity-100 animate-slide-in-right" : "opacity-0"
+          }`}
       >
         <img
-          src="/images/elephant.jpg"
+          src="/images/elephant.png"
           alt="Decorated Indian wedding elephant"
           className="w-full object-contain drop-shadow-2xl"
+          style={{ mixBlendMode: "multiply" }}
         />
       </div>
 

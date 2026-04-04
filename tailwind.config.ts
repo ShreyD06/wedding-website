@@ -16,6 +16,16 @@ const config: Config = {
           cream: "var(--wedding-cream)",
           crimson: "var(--wedding-crimson)",
           dark: "var(--wedding-dark)",
+        }
+      },
+      keyframes: {
+        slideInLeft: {
+          "0%": { transform: "translateX(-100%) scaleX(-1)" },
+          "100%": { transform: "translateX(0) scaleX(-1)" },
+        },
+        slideInRight: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
       fontFamily: {
@@ -23,6 +33,10 @@ const config: Config = {
         mono: ["var(--font-geist-mono)"],
       },
     },
+    animation: {
+      "slide-in-left": "slideInLeft 0.8s ease-out forwards",
+      "slide-in-right": "slideInRight 0.8s ease-out forwards",
+    }
   },
   plugins: [],
 }
