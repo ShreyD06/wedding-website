@@ -20,12 +20,12 @@ export function Confetti({ isActive }: { isActive: boolean }) {
     const colors = ["#D4AF37", "#C41E3A", "#FF6B6B", "#FFD700", "#FF1744", "#FFC107"]
     const newPieces: ConfettiPiece[] = []
 
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 300; i++) {
       newPieces.push({
         id: i,
         x: Math.random() * 100,
         color: colors[Math.floor(Math.random() * colors.length)],
-        delay: Math.random() * 2,
+        delay: Math.random() * 3,
         duration: 3 + Math.random() * 2,
         size: 8 + Math.random() * 8,
       })

@@ -11,6 +11,7 @@ interface RevealSectionProps {
 export function RevealSection({ isVisible, name = "YOUR NAME" }: RevealSectionProps) {
   const [showText, setShowText] = useState(false)
   const [showConfetti, setShowConfetti] = useState(false)
+  const [showElephants, setShowElephants] = useState(false)
 
   useEffect(() => {
     if (isVisible) {
@@ -23,9 +24,14 @@ export function RevealSection({ isVisible, name = "YOUR NAME" }: RevealSectionPr
         setShowConfetti(true)
       }, 600)
 
+      const elephantTimer = setTimeout(() => {
+        setShowElephants(true)
+      }, 800)
+
       return () => {
         clearTimeout(textTimer)
         clearTimeout(confettiTimer)
+        clearTimeout(elephantTimer)
       }
     }
   }, [isVisible])
@@ -46,13 +52,39 @@ export function RevealSection({ isVisible, name = "YOUR NAME" }: RevealSectionPr
 
       <Confetti isActive={showConfetti} />
 
+      {/* Left elephant — slides in from left, faces right */}
+      <div
+        className={`absolute bottom-0 left-0 w-40 md:w-56 lg:w-72 z-20 transition-opacity duration-300 ${
+          showElephants ? "opacity-100 animate-slide-in-left" : "opacity-0"
+        }`}
+      >
+        <img
+          src="/images/elephant.jpg"
+          alt="Decorated Indian wedding elephant"
+          className="w-full object-contain drop-shadow-2xl"
+        />
+      </div>
+
+      {/* Right elephant — slides in from right, faces left (natural orientation) */}
+      <div
+        className={`absolute bottom-0 right-0 w-40 md:w-56 lg:w-72 z-20 transition-opacity duration-300 ${
+          showElephants ? "opacity-100 animate-slide-in-right" : "opacity-0"
+        }`}
+      >
+        <img
+          src="/images/elephant.jpg"
+          alt="Decorated Indian wedding elephant"
+          className="w-full object-contain drop-shadow-2xl"
+        />
+      </div>
+
       <div
         className={`text-center z-10 transition-all duration-700 ${showText ? "opacity-100 scale-100" : "opacity-0 scale-75"
           }`}
       >
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white drop-shadow-2xl animate-bounce-once">
-          <span className="block mb-4 text-wedding-gold">{name}</span>
-          <span className="block text-wedding-gold">IS GETTING MARRIED!!!</span>
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-pink-400 drop-shadow-2xl animate-bounce-once">
+          <span className="block mb-4 text-yellow-300">{name}</span>
+          <span className="block text-yellow-300">IS GETTING MARRIED!!!</span>
         </h1>
         <div className="mt-8 flex justify-center gap-4 text-5xl md:text-7xl">
           <span className="animate-bounce" style={{ animationDelay: "0s" }}>
