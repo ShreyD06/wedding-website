@@ -12,7 +12,7 @@ import { CoupleSection } from "@/components/couple-section"
 
 const WEDDING_CONFIG = {
   // The name that appears in the big reveal
-  name: "YOUR NAME",
+  name: "SPARSH",
 
   // Bride section details
   bride: {

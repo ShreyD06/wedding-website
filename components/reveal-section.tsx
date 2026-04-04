@@ -47,13 +47,12 @@ export function RevealSection({ isVisible, name = "YOUR NAME" }: RevealSectionPr
       <Confetti isActive={showConfetti} />
 
       <div
-        className={`text-center z-10 transition-all duration-700 ${
-          showText ? "opacity-100 scale-100" : "opacity-0 scale-75"
-        }`}
+        className={`text-center z-10 transition-all duration-700 ${showText ? "opacity-100 scale-100" : "opacity-0 scale-75"
+          }`}
       >
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white drop-shadow-2xl animate-bounce-once">
-          <span className="block mb-4">{name}</span>
-          <span className="block text-wedding-cream">IS GETTING MARRIED!!!</span>
+          <span className="block mb-4 text-wedding-gold">{name}</span>
+          <span className="block text-wedding-gold">IS GETTING MARRIED!!!</span>
         </h1>
         <div className="mt-8 flex justify-center gap-4 text-5xl md:text-7xl">
           <span className="animate-bounce" style={{ animationDelay: "0s" }}>
