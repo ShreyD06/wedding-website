@@ -16,8 +16,8 @@ const WEDDING_CONFIG = {
 
   // Bride section details
   bride: {
-    name: "The Bride",
-    bio: "Loves chai, hates early mornings, and somehow said yes.",
+    name: "Meet Nirzari!",
+    bio: "Future doctor in the making, she balances the intensity of medical school with a love for reading, traveling, painting, and getting a good workout in.",
     funFacts: ["Loves traveling", "Always late", "Surprisingly competitive"],
     // Replace with actual image path
     imageSrc: "/images/bride.jpg",
