@@ -18,19 +18,16 @@ const WEDDING_CONFIG = {
   bride: {
     name: "Meet Nirzari!",
     bio: "Future doctor in the making, she balances the intensity of medical school with a love for reading, traveling, painting, and getting a good workout in.",
-    funFacts: ["Loves traveling", "Always late", "Surprisingly competitive"],
+    funFacts: ["Loves exploring new places", "Loves sunsets", "Always down to try a new cuisine"],
     // Replace with actual image path
     imageSrc: "/images/bride.jpg",
   },
 
   // Couple photos - add your image paths here
   coupleImages: [
-    "/images/couple-1.jpg",
-    "/images/couple-2.jpg",
-    "/images/couple-3.jpg",
-    "/images/couple-4.jpg",
-    "/images/couple-5.jpg",
-    "/images/couple-6.jpg",
+    "/images/couple1.JPEG",
+    "/images/couple2.JPG",
+    "/images/couple3.JPG",
   ],
 }
 
